@@ -1,3 +1,12 @@
+class player:
+    pass
+class npc:
+    pass
+class game_engine:
+    pass
+class graphics_engine:
+    pass
+
 import time
 from pynput import keyboard
 
