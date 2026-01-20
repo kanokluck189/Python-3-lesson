@@ -1,7 +1,7 @@
-from game_engine import GameEngine
-from graphics_engine import PygameGraphics
-from player import Player
-from npc import NPC
+from game.game_engine import GameEngine
+from game.graphics_engine import PygameGraphics
+from game.player import Player
+from game.npc import NPC
 
 def main():
     graphics = PygameGraphics()
