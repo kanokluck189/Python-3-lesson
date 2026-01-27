@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Plotter</title>
+</head>
+<body>
+    <h1>Function Plotter</h1>
+
+    <form method="post">
+        <label>Expression:</label><br>
+        <input type="text" name="expression" value="{{ expression }}" size="40"><br><br>
+
+        <label>Interval:</label><br>
+        a = <input type="number" step="any" name="a" value="{{ a }}">
+        b = <input type="number" step="any" name="b" value="{{ b }}"><br><br>
+
+        <label>Color:</label><br>
+        <select name="color">
+            <option value="blue"  {% if color == "blue" %}selected{% endif %}>Blue</option>
+            <option value="red"   {% if color == "red" %}selected{% endif %}>Red</option>
+            <option value="black" {% if color == "black" %}selected{% endif %}>Black</option>
+        </select><br><br>
+
+        <button type="submit">Make a plot</button>
+    </form>
+
+    <hr>
+
+    <h2>Plot</h2>
+    <img src="{{ url_for('static', filename='plot.png') }}?{{ expression }}" alt="Plot">
+
+</body>
+</html>
