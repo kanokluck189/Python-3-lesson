@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find a Friend for the Moment</title>
+</head>
+<body>
+    <h1>Find a Friend for the Moment 🤝</h1>
+
+    <form method="post">
+        <label>Nickname:</label><br>
+        <input type="text" name="nickname" required><br><br>
+
+        <label>Your message:</label><br>
+        <textarea name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Find Friend</button>
+    </form>
+
+    {% if recommendations %}
+        <hr>
+        <h2>Recommended Friends</h2>
+        <pre>{{ recommendations }}</pre>
+    {% endif %}
+</body>
+</html>
